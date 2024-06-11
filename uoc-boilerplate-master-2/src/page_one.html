@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">  
+</head>
+<body class="font-sans">
+
+    <header class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="thelogo.png" alt="Logo" class="h-10">
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="page_one.html" class="text-white hover:text-gray-300">Página Uno</a></li>
+                    <li><a href="page_two.html" class="text-white hover:text-gray-300">Página Dos</a></li>
+                    <li><a href="page_three.html" class="text-white hover:text-gray-300">Página Tres</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <article>
+            <h1 class="title">Barcelona se Prepara para un Emocionante Concurso de Cocina: Gastronomía en su Máxima Expresión</h1>
+            <img src="imaagen1.jpg" alt="Imagen 1" class="w-full mb-4">
+            <p class="mb-4">En las brillantes calles de Barcelona, se avecina un emocionante evento culinario que capturará la atención de los amantes de la gastronomía. Bajo el nombre "Cocina de Vanguardia: Innovación en Cada Bocado", este concurso, organizado por la Asociación Gastronómica de Barcelona, reunirá a chefs talentosos en un desafío que celebra la creatividad y el dominio culinario.</p>
+            <blockquote class="border-l-4 border-gray-500 pl-4 italic mb-4">
+                <p class="mb-2">"Este concurso es una plataforma para destacar la fusión entre tradición y modernidad en la cocina, desafiando a los participantes a crear platos únicos que impresionen tanto visual como gustativamente", comenta María López, presidenta de la asociación.</p>
+            </blockquote>
+            <p class="mb-4">Los concursantes competirán en rondas eliminatorias donde deberán demostrar su destreza utilizando técnicas innovadoras y ingredientes locales. Desde reinterpretaciones de platos clásicos hasta creaciones totalmente revolucionarias, se espera que el concurso sea una exhibición de talento y creatividad gastronómica.</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>Ronda 1</li>
+                <li>Ronda 2</li>
+                <li>Ronda 3</li>
+            </ul>
+            <p class="mb-4">Durante el evento, habrá degustaciones abiertas al público donde los espectadores podrán disfrutar de las creaciones culinarias de los concursantes y descubrir nuevos sabores que destacan la diversidad culinaria de la región. Además del reconocimiento, los ganadores tendrán la oportunidad de colaborar con chefs locales reconocidos y participar en eventos exclusivos.</p>
+            <img src="imaagen2.jpg" alt="Imagen 2" class="w-full mb-4">
+            <p>Marca tus calendarios y prepárate para unirse a esta emocionante experiencia gastronómica en Barcelona. Desde platos audaces hasta técnicas innovadoras, este concurso promete ser una celebración de la cocina de vanguardia donde el pasado y el futuro se unen en cada bocado.</p>
+        </article>
+
+        <div id="about-section"></div> <div id="contact-section"></div>
+    </main>
+
+    <footer class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="thelogo.png" alt="Logo" class="h-10">
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="page_one.html" class="text-white hover:text-gray-300">Participantes</a></li>
+                    <li><a href="page_two.html" class="text-white hover:text-gray-300">Información</a></li>
+                    <li><a href="page_three.html" class="text-white hover:text-gray-300">Registro</a></li>
+                </ul>
+            </nav>
+            <div class="flex space-x-4">
+                <a href="https://www.google.com"><img src="google.png" alt="Google" class="h-6"></a>
+                <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook" class="h-6"></a>
+                <a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" class="h-6"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        fetch('about.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('about-section').innerHTML = html;
+            });
+
+        fetch('contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('contact-section').innerHTML = html;
+            });
+    </script>
+
+</body>
+</html>

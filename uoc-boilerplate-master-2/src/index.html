@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">  
+    <link href="styles.css" rel="stylesheet">
+    <title>Encabezado y Pie de Página</title>
+</head>
+<body class="font-sans">
+    <header class="header bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="thelogo.png" alt="Logo" class="h-10">
+            </div>
+            <nav class="nav">
+                <ul class="flex space-x-4">
+                    <li><a href="page_one.html" class="text-white hover:text-gray-300">Página Uno</a></li>
+                    <li><a href="page_two.html" class="text-white hover:text-gray-300">Página Dos</a></li>
+                    <li><a href="page_three.html" class="text-white hover:text-gray-300">Página Tres</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div id="welcome-section"></div>
+    </main>
+
+    <footer class="footer bg-gray-200 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="thelogo.png" alt="Logo" class="h-6">
+            </div>
+            <nav class="nav">
+                <ul class="flex space-x-4">
+                    <li><a href="https://www.google.com" class="text-gray-600 hover:text-gray-800">Google</a></li>
+                    <li><a href="https://www.facebook.com" class="text-gray-600 hover:text-gray-800">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" class="text-gray-600 hover:text-gray-800">Twitter</a></li>
+                </ul>
+            </nav>
+            <div class="social-media flex space-x-4">
+                <a href="https://www.google.com"><img src="google.png" alt="Google" class="h-6"></a>
+                <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook" class="h-6"></a>
+                <a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" class="h-6"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('welcome.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('welcome-section').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
